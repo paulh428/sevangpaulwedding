@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+
+.message {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Alex Brush', cursive;
+}
+
+.a-message {
+    margin-bottom: 0;
+}
+
+.name-message {
+    margin-top: 0;
+}
+
+.hugging {
+    display: inline-block;
+    width: 250px;
+}
+
+.bodymessage {
+    display: inline-block;
+    width: 1000px;
+    margin-top: 0;
+}
