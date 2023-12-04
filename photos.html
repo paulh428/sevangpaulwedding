@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to Access Photos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #444;
+      padding: 0.5em 2em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2em;
+    }
+
+    .icon {
+      margin-right: 5px;
+    }
+
+    #menu-icon {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 2em;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5em;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      #menu-icon {
+        display: block;
+      }
+    }
+
+    form {
+      max-width: 400px;
+      margin: 2em auto;
+      background-color: #fff;
+      padding: 1em;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Login to Access Photos</h1>
+  </header>
+
+  <nav>
+    <div id="menu-icon"><i class="fas fa-bars"></i></div>
+    <a href="index.html"><i class="fas fa-home icon"></i> Home</a>
+    <a href="about.html"><i class="fas fa-info-circle icon"></i> About</a>
+    <a href="rsvp.html"><i class="fas fa-calendar-check icon"></i> RSVP</a>
+    <a href="photos.html"><i class="fas fa-camera icon"></i> Photos</a>
+    <a href="info.html"><i class="fas fa-info icon"></i> Information</a>
+  </nav>
+
+  <form action="#" method="post" onsubmit="return validateForm()">
+    <label for="accessCode">Enter Access Code:</label>
+    <input type="password" id="accessCode" name="accessCode" required>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      var enteredCode = document.getElementById('accessCode').value;
+      // Replace 'yourSecretCode' with the actual secret code you want to use
+      if (enteredCode !== 'yourSecretCode') {
+        alert('Invalid access code. Please try again.');
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+</html>
